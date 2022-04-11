@@ -1,0 +1,39 @@
+.carousel {
+    width: 400px;
+}
+
+nav {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,78,1) 78%);}
+
+#sobreNos {
+    max-width: 250px;
+}
+
+ul li{
+    padding: 0.4rem;
+}
+
+main {
+    margin-top: 100px;
+}
+/*Footer*/
+footer {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,2,82,1) 78%);  }
+.copy {
+    position: relative;
+    left: 85px;
+    top: 6px;
+    font-size: 12px;
+}
+
+.logoFooter {
+    margin: 40px 250px 0px 0px;
+    font-size: xx-large;
+}
+
+.comicsRelacionadosImg img:hover {
+    transform: scale(102%);
+    transition: 0.3s;
+}
