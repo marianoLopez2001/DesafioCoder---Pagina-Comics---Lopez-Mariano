@@ -1,31 +1,76 @@
-.carousel {
-    width: 400px;
+* {
+    font-family: 'Anek Bangla', sans-serif;
 }
+
+/*MI PROPIO COLOR DE FONDO (GRADIENTE)*/
+
+.bg-miColor {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,2,82,1) 78%);  
+}
+
+/* PADDING PERSONALIZADO */
+
+.p-6 {
+    padding: 5rem;
+}
+
+/*SOMBRA PERSONALIZADA*/
+
+.shadow2 {
+    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.5);
+}
+
+.textShadow {
+    text-shadow: 0.1rem 0.2rem rgba(0,0,0,0.1);
+}
+
+/*HEADER*/
 
 nav {
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,78,1) 78%);}
-
-#sobreNos {
-    max-width: 250px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,78,1) 78%);
 }
-
 ul li{
     padding: 0.4rem;
 }
 
-main {
-    margin-top: 100px;
+/*MAIN */
+
+.carousel {
+    width: 400px;
 }
+main {
+    margin-top: 120px;
+}
+
+/*SOBRE NOSOTROS*/
+
+.sobreNosSection p{
+    max-width: 700px;
+}
+
+/*INSTRUCCIONES*/
+.instrucciones a {
+    text-decoration: none;
+}
+
+.instrucciones a:hover {
+    text-decoration: underline;
+}
+
 /*Footer*/
-footer {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,2,82,1) 78%);  }
+
 .copy {
-    position: relative;
-    left: 85px;
-    top: 6px;
     font-size: 12px;
+}
+
+.linkRedes {
+    text-decoration: none;
+}
+
+.linkRedes:hover {
+    text-decoration: underline;
 }
 
 .logoFooter {
@@ -33,7 +78,47 @@ footer {
     font-size: xx-large;
 }
 
-.comicsRelacionadosImg img:hover {
+#sobreNos {
+    max-width: 400px;
+}
+
+/*Animacion Imagenes*/
+
+.comicsRelacionadosImg img:hover, .recienAgregados1 img:hover, .recienAgregados2 img:hover, .tendencias1 img:hover, .tendencias2 img:hover, .editoriales img:hover {
     transform: scale(102%);
     transition: 0.3s;
 }
+
+/*PAGINA INSTRUCCIONES*/
+
+.instruccionesIzq p {
+    max-width: 600px;
+    margin: auto;
+}
+
+/*BORDERS PERSONALIZADOS*/
+
+.border-top {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/*BOTONES SIGUIENTE*/
+
+.botonesSiguiente {
+    text-align: center;
+}
+
+.botonesSiguiente p{
+    display: inline-block;
+    border-radius: 8px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,2,82,1) 78%);  
+    padding: 10px 15px;
+    margin: 5px 8px;
+    color: white;    
+}
+
