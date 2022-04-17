@@ -1,13 +1,8 @@
-* {
-    font-family: 'Anek Bangla', sans-serif;
-}
-
-/*MI PROPIO COLOR DE FONDO (GRADIENTE)*/
+/*MI PROPIO COLOR DE FONDO (no me convence mucho la verdad) */
 
 .bg-miColor {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,2,82,1) 78%);  
-}
+    background: rgb(255,72,53);
+    background: linear-gradient(0deg, rgba(255,72,53,1) 0%, rgba(231,76,60,1) 24%);}
 
 /* PADDING PERSONALIZADO */
 
@@ -27,10 +22,6 @@
 
 /*HEADER*/
 
-nav {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,78,1) 78%);
-}
 ul li{
     padding: 0.4rem;
 }
@@ -39,6 +30,7 @@ ul li{
 
 .carousel {
     width: 400px;
+    margin-bottom: 3rem;
 }
 main {
     margin-top: 120px;
@@ -46,11 +38,22 @@ main {
 
 /*SOBRE NOSOTROS*/
 
+.sobreNosSection {
+    padding: 3rem;
+}
+
 .sobreNosSection p{
     max-width: 700px;
 }
 
+/*TEXTO RECIEN AGREGADOS Y TENDENCIAS*/
+
+.tend, .rec {
+    text-align: start;
+}
+
 /*INSTRUCCIONES*/
+
 .instrucciones a {
     text-decoration: none;
 }
@@ -59,7 +62,25 @@ main {
     text-decoration: underline;
 }
 
+/*FORM Y IFRAME*/
+
+.formIframe {       
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
 /*Footer*/
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contactInfo {
+    display: block;
+}
 
 .copy {
     font-size: 12px;
@@ -67,6 +88,7 @@ main {
 
 .linkRedes {
     text-decoration: none;
+    display: block;
 }
 
 .linkRedes:hover {
@@ -82,9 +104,17 @@ main {
     max-width: 400px;
 }
 
+.sobreNosDiv {
+    margin-bottom: 3rem;
+}
+
+.sobreNosDiv h5 {
+    padding-bottom: 1rem;
+}
+
 /*Animacion Imagenes*/
 
-.comicsRelacionadosImg img:hover, .recienAgregados1 img:hover, .recienAgregados2 img:hover, .tendencias1 img:hover, .tendencias2 img:hover, .editoriales img:hover {
+.comicsRelacionadosImg img:hover, .recienAgregados1 img:hover, .recienAgregados2 img:hover, .tendencias1 img:hover, .tendencias2 img:hover, .editoriales img:hover, .tend img, .rec img {
     transform: scale(102%);
     transition: 0.3s;
 }
@@ -96,7 +126,11 @@ main {
     margin: auto;
 }
 
-/*BORDERS PERSONALIZADOS*/
+.instruccionesDer {
+    text-align: center;
+}
+
+/*BORDES PERSONALIZADOS*/
 
 .border-top {
     border-bottom: 1px solid #dee2e6;
@@ -112,13 +146,122 @@ main {
     text-align: center;
 }
 
-.botonesSiguiente p{
+.botonesSiguiente a:hover {
+    background-color: #ff6d5d;
+}
+
+.botonesSiguiente a{
     display: inline-block;
+    text-decoration: none;
     border-radius: 8px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,2,82,1) 78%);  
-    padding: 10px 15px;
+    background-color: #ff4835;    
+    padding: 10px 15px; 
     margin: 5px 8px;
     color: white;    
 }
+
+/*LOS HIDE SON PARA LAS MEDIA QUERIES*/
+
+.hide1, .hide2 {
+    display: none;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width:330px) {
+    .tendencias1 img, .tendencias2 img, .recienAgregados1 img, .recienAgregados2 img {
+        width: 150px;
+    }
+}
+    
+@media only screen and (max-width:425px) {
+    .carousel {
+        margin-bottom: 1.8rem;
+        margin-top: -2rem;
+    }
+    #sobreNos {
+        font-size: 15px;
+    }
+    .sobreNosSection h1 {
+        font-size: 20px;
+    }
+    .sobreNosSection {
+        padding: 15px;
+    }
+    .sobreNosSection p {
+        font-size: 12px;
+    }
+    .botonesSiguiente a{
+        font-size: 15px;
+        margin: 3px;
+    }
+    .footerGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sobreNosDiv h5 {
+        margin-top: 1rem;
+        padding: 0rem;      
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .tendencias1 img, .recienAgregados1 img, .tendencias2 img, .recienAgregados2 img {
+        width: 200px;
+    }
+    .mapaG {
+        display: none;
+    }
+    .iframeIns {
+        width: auto;
+    }
+    .botonesSiguiente {
+        font-size: 10xp;
+    }
+}
+
+
+@media only screen and (min-width:768px) {
+    .hide2 {
+        display: initial;
+    }    
+}
+
+@media only screen and (max-width:768px) {
+    .hide4 {
+        display: none;
+    }
+    .instruccionesDer img {
+        margin: 10px;
+    }
+    .rec, .tend {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .hide1 {
+        display: initial;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .linkRedes {
+        display: initial;
+    }
+    .contactInfo {
+        display: initial;
+    }
+}
+
+@media only screen and (min-width:1400px) {
+    .aside {
+        display: block;
+    }
+    .footerGrid {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
 
