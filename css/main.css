@@ -36,14 +36,17 @@ main {
     margin-top: 120px;
 }
 
-/*SOBRE NOSOTROS*/
-
-.sobreNosSection {
-    padding: 3rem;
+.card {
+    width: 30rem;
 }
 
-.sobreNosSection p{
-    max-width: 700px;
+.card h1, h2 {
+    font-size: 30px;
+}
+
+.seccionCarousel {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1.5rem;
 }
 
 /*TEXTO RECIEN AGREGADOS Y TENDENCIAS*/
@@ -60,6 +63,147 @@ main {
 
 .instrucciones a:hover {
     text-decoration: underline;
+}
+
+/*PAGINA EDITORIALES Y PERSONAJES*/
+
+.editoriales {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.formIframe form h2 {
+    font-size: 24px;
+}
+
+.editorialesTop {
+    margin-top: 3rem;
+}
+
+/*PAGINA SOBRE NOSOTROS*/
+
+.contenedorSobreNos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+    border-bottom: 1px solid #dee2e6;
+    margin: 0rem 5rem;
+    padding: 3rem;
+}
+
+.sobreNosUno {
+    padding: 3rem;
+    margin-bottom: 200px;
+    border: 1px solid #dee2e6;
+}
+
+.sobreNosUno h1 {
+    font-size: 30px;
+    margin: 0px 0px 2rem 0px;
+}
+
+.sobreNosUno p {
+    max-width: 500px;
+}
+
+.sobreNosUno h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 30px;
+}
+
+.redesSobreNos h4 {
+    text-align: center;
+    font-size: 35px;
+    margin: 30px;
+}
+
+.sobreNosUno a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+.sobreNosUno a:hover {
+    text-decoration: underline;
+}
+
+.diseñoPor {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    margin-top: 200px;
+    padding: 1rem;
+}
+
+.diseñoPor h5 {
+    font-size: 30px;
+    margin: 2rem;
+}
+
+.diseñoPor img {
+    margin-bottom: 0.5rem;
+}
+
+.diseñoPor p {
+    max-width: 500px;
+}
+
+.diseñoPor a {
+    text-decoration: none;
+    color: black;
+}
+
+.diseñoPor a:hover {
+    text-decoration: underline;
+}
+
+.redesFlex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.redesFlex div {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.redesFlex div a {
+    font-size: 20px;
+}
+
+.redesSobreNos {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    border: 1px solid #dee2e6;
+    margin-bottom: 200px;
+}
+
+.redesSobreNos h5 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.redesFlex div i{
+    font-size: 500%;
+}
+
+.sedes {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 200px;
+    border: 1px solid #dee2e6;
 }
 
 /*FORM Y IFRAME*/
@@ -108,7 +252,7 @@ main {
     margin-bottom: 3rem;
 }
 
-.sobreNosDiv h5 {
+.sobreNosDiv h5, h3 {
     padding-bottom: 1rem;
 }
 
@@ -124,13 +268,19 @@ main {
 .instruccionesIzq p {
     max-width: 600px;
     margin: auto;
+    font-size: 1.25rem;
+}
+
+.comicsRelacionadosImg2 {
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .instruccionesDer {
     text-align: center;
 }
 
-/*BORDES PERSONALIZADOS*/
+/*BORDES PERSONALIZADOS creo que ni los use*/
 
 .border-top {
     border-bottom: 1px solid #dee2e6;
@@ -146,6 +296,12 @@ main {
     text-align: center;
 }
 
+.comicsRelacionados {
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 3rem 1rem 1rem 0rem;
+}
+
 .botonesSiguiente a:hover {
     background-color: #ff6d5d;
 }
@@ -155,7 +311,7 @@ main {
     text-decoration: none;
     border-radius: 8px;
     background-color: #ff4835;    
-    padding: 10px 15px; 
+    padding: 8px 18px; 
     margin: 5px 8px;
     color: white;    
 }
@@ -204,22 +360,6 @@ main {
     }
 }
 
-@media only screen and (max-width:575px) {
-    .tendencias1 img, .recienAgregados1 img, .tendencias2 img, .recienAgregados2 img {
-        width: 200px;
-    }
-    .mapaG {
-        display: none;
-    }
-    .iframeIns {
-        width: auto;
-    }
-    .botonesSiguiente {
-        font-size: 10xp;
-    }
-}
-
-
 @media only screen and (min-width:768px) {
     .hide2 {
         display: initial;
@@ -236,30 +376,160 @@ main {
     .rec, .tend {
         text-align: center;
     }
+    .comicsRelacionados {
+        display: none;
+    }
+    main {
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .editoriales img {
+        width: 200px;
+    }
 }
 
-@media only screen and (min-width:1200px) {
+@media only screen and (max-width:992px) {
+    .comicsRelacionadosImg2 {
+        padding: 0.7rem;
+        width: 250px;
+    }
+    .contenedorSobreNos {
+        padding: 0rem;
+    }
+    .hide6 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .tendencias1 img, .recienAgregados1 img, .tendencias2 img, .recienAgregados2 img {
+        width: 200px;
+    }
+    .mapaG {
+        display: none;
+    }
+    .iframeIns {
+        width: auto;
+    }
+    .botonesSiguiente a{
+        font-size: 10xp;
+    }
+    form h4 {
+        font-size: 1.2rem;
+    }
+    main {
+        margin-top: 80px;
+    }
+    .card h1, h2 {
+        font-size: 20px;
+    }
+    .instruccionesDer {
+        display: none;
+    }
+    .iframeVid {
+        width: 80%;
+    }
+    .instr p {
+        font-size: 1rem;
+    }
+    .personajes h1 {
+        font-size: 20px;
+    }
+    .editoriales img {
+        width: 100px;
+    }
+    .editorialesTop {
+        margin: 0rem;
+    }
+}
+
+@media only screen and (min-width:1024px) {
     .hide1 {
         display: initial;
     }
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1024px) {
     .linkRedes {
         display: initial;
     }
     .contactInfo {
         display: initial;
+    }    
+}
+
+@media only screen and (max-width:1200px) {
+    .hide4-2 {
+        display: none;
+    }
+    .editoriales {
+        grid-template-columns: repeat(3, 1fr) ;
     }
 }
 
-@media only screen and (min-width:1400px) {
+@media only screen and (max-width:1270px) {
+    .hide4-2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1441px) {
     .aside {
         display: block;
     }
     .footerGrid {
         display: flex;
         justify-content: space-between;
+    }
+    .card p {
+        font-size: 1.5rem;
+    }
+    .card p, a {
+        font-size: 1.5rem;
+    }
+    .instr p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:1440px) {
+    .contenedorSobreNos {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-flow: column wrap;
+        text-align: center;
+    }
+    .sobreNosUno {
+        padding: 2rem;
+        margin: 20px;
+    }
+    .sobreNosUno p {
+        width: auto;
+    }
+    .sedes {
+        margin: 20px;
+        padding: 2rem;
+    }
+    .redesSobreNos {
+        margin: 20px;
+        padding: 2rem;
+    }
+    .redesSobreNos h4 {
+        font-size: 30px;
+    }
+    .redesSobreNos a {
+        font-size: 0.5rem;
+    }
+    .diseñoPor {
+        margin: 20px;
+        padding: 2rem;
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .card {
+        width: 40rem;
     }
 }
 
